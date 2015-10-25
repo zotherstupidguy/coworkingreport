@@ -1,0 +1,30 @@
+</br>
+</br>
+
+<h5 style="color: orange;">
+  <%= @space %> : <%= @total %> Events and counting...
+</h5>
+<!--
+
+<% @upcoming_event.each do |event| %>
+<b>
+  <% @event_date = Time.parse(event["start_time"]) unless event["start_time"].nil? %> 
+  <h3>
+    <% @event_date > Time.now ?  @coming_up = true : @coming_up = false unless @event_date.nil? %>
+    <%= @event_date > Time.now ? "ComingUp... " + Time.parse(event["start_time"]).strftime("%B %d, %Y")  :  "in the past... " + Time.parse(event["start_time"]).strftime("%B %d, %Y") unless @event_date.nil? %>
+  </h3>
+</b> <div class="event_cover_upcoming">
+  <div class="bs-example" >
+    <div class="list-group" >
+      <a href="#" class="list-group-item active">
+	<img src=<%= event["cover"]["source"] unless event["cover"].nil?%>>
+	<h4 class="list-group-item-heading"><%= event["name"] %></h4>
+	<h4 class="list-group-item-heading"><%= Time.parse(event["start_time"]).strftime("%B %d, %Y") unless event["start_time"].nil? %></h4>
+	<p class="list-group-item-text"><%= event["description"] %></p>
+      </a>
+
+    </div>
+  </div>
+</div>
+<% end %>
+-->

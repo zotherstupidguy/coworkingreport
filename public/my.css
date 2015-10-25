@@ -1,0 +1,18 @@
+@import url(http://fonts.googleapis.com/css?family=Bangers);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+body{
+font-family: 'Roboto', 'Bangers';
+font-size: 120%; 
+}
+
+/* Panels */
+.panel {
+  font-size: 70%; 
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d8d8d8;
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
+  background: #F8E326;
+color: #CA2222; }
