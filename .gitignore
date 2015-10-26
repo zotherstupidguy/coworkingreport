@@ -1,4 +1,5 @@
 /secret.yml
+*.swp
 *.gem
 *.rbc
 /.config

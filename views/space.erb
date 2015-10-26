@@ -5,7 +5,7 @@
   <%= @space %> : <%= @total %> Events and counting...
     </h5>
 
-  <% @data.each do |event| %>
+  <% @space_events.each do |event| %>
       <!-- <div class="event_cover"style="background-image: url(<%= event["cover"]["source"] unless event["cover"].nil?%>);">
     -->
     <b>
@@ -44,7 +44,7 @@
   <% end %>
 
   <!--
-<=-%= @data  %>
+<=-%= @space_events  %>
   <-%= event[0]["name"] %>
   -->
 

@@ -4,9 +4,8 @@
 <h5 style="color: orange;">
   <%= @space %> : <%= @total %> Events and counting...
 </h5>
-<!--
 
-<% @upcoming_event.each do |event| %>
+<% @upcoming_events.each do |event| %>
 <b>
   <% @event_date = Time.parse(event["start_time"]) unless event["start_time"].nil? %> 
   <h3>
@@ -27,4 +26,3 @@
   </div>
 </div>
 <% end %>
--->
