@@ -5,7 +5,7 @@ require 'yaml'
 
 @r = Redis.new
 
-#@spaces = Marshal.load(@r.get("spaces",)
+#@spaces 	= Marshal.load(@r.get("spaces",)
 #@r.set(@spaces, Marshal.dump())
 
 def fetch_events space 

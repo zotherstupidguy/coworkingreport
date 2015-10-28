@@ -1,6 +1,6 @@
 require_relative './helper_spec'
 
-describe 'fb' do
+describe 'fb_api' do
   before do
     @r = Redis.new
     require 'logger'

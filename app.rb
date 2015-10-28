@@ -1,5 +1,5 @@
 require 'sinatra'
-require './lib/fb.rb'
+require './lib/fb_api.rb'
 
 
 get '/' do
