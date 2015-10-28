@@ -1,3 +1,4 @@
+*.lock
 /secret.yml
 *.swp
 *.gem

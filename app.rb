@@ -3,6 +3,7 @@ require './lib/fb.rb'
 
 
 get '/' do
+
   @r			= Redis.new
   @spaces 		= @r.smembers("spaces")
   @upcoming_events 	= []
@@ -12,7 +13,6 @@ get '/' do
 
     @space_events.each do |event|
       $logger.info("#{event} is on iteration")
-
 
       if !event["start_time"].nil? then 
 
@@ -50,9 +50,9 @@ get '/:space' do
   if @r.get(params["space"]).nil?
     fetch_events(params["space"])
   end
-  @space	= params["space"]
+  @space		= params["space"]
   @space_events 	= Marshal.load(@r.get(params[:space]))
-  @total 	= @space_events.count
+  @total 		= @space_events.count
 
   erb :space
 end

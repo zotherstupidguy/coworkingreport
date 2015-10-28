@@ -10,20 +10,18 @@ require 'yaml'
 
 def fetch_events space 
 
-  @db		= {} 
+  @db		= {}
   @parsed 	= begin
 		    YAML.load(File.open("./secret.yml"))
 		  rescue ArgumentError => e
 		    puts "Could not parse YAML: #{e.message}"
 		  end
   @token 	= @parsed["token"]
-  @space = space 
+  @space 	= space 
 
   @r.sadd("spaces",@space) unless @r.smembers("spaces").include? @space
 
-  $logger.info("#############################")
   $logger.info(@space)
-  $logger.info("#############################")
 
   #@result = open("https://graph.facebook.com/v2.0/#{space}/events?key=past&access_token=#{@token}")
   #@result = open("https://graph.facebook.com/v2.0/#{@space}/events?key=past&access_token=#{@token}")
@@ -46,8 +44,9 @@ def fetch_events space
 
   action
   @r.set(@space, Marshal.dump(@db[@space]))
+  @result
   #p  @result["error"]["message"]
-  $logger.info(@result)
+  #$logger.info(@result)
 end
 
 #fetch_events("DistrictEgypt")
