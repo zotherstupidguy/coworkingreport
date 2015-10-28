@@ -17,7 +17,7 @@ task 'db:flush' do
   $logger.info("Redis got a flushall")
 end
 
-desc 'Complete clean test'
+desc 'Complete clean test, should depend on other stuff'
 task :complete do
   #ENV['Somevariable'] = 'true'
   Rake::Task['db:info'].execute
