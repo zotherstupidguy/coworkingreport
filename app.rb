@@ -23,15 +23,7 @@ get '/' do
 	#if @coming_up then 
 	if @event_date > Time.parse(Time.now.to_s) 
 
-	  $logger.info("##############")
-	  $logger.info("##############")
-	  $logger.info("##############")
-	  $logger.info("##############")
 	  $logger.info("we got an upcoming on #{@event_date} and today is #{Time.parse(Time.now.to_s)}")
-	  $logger.info("##############")
-	  $logger.info("##############")
-	  $logger.info("##############")
-	  $logger.info("##############")
 
 	  @upcoming_events << event
 	  $logger.info("############### Adding #{event} to @upcoming_events ##############")
